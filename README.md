@@ -3,3 +3,5 @@
 ## kilian
 ## lucine 
 ## naima
+bonjour
+au revoir
