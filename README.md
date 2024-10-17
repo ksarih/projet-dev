@@ -21,6 +21,6 @@
 | 13/12       | Présentation finale                          | Exposer les résultats du projet.               |
 
 
-http://localhost:5540/deloppement_logiciel.html#retro-planning-avec-diagramme-de-gantt
+
                                  
 
