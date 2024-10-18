@@ -30,5 +30,5 @@ L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Mo
 
 
                                  
->>>>>>> b54adafb1a4938781ba2363d4f9b626622954075
+
 
