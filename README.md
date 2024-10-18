@@ -1,8 +1,5 @@
 # Projet d'équipe : vélos et vélos en libre-service à Montpellier
-<<<<<<< HEAD
 
-## Descrpition du porjet
-L'objectif de ce projet est d'analyser et de visualiser le trafic vélo à Montpellier en utilisant plusieurs jeux de données :
 =======
 ## Participants du groupes et leurs numéros étudiants ():
 
@@ -12,10 +9,11 @@ L'objectif de ce projet est d'analyser et de visualiser le trafic vélo à Montp
 - **kilian saint-chely** (22210432)
 
 ## Description du projet:
-L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Montpellier en utilisiant différents jeux de données:
+L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Montpellier en utilisiant différents jeux de données:  
 -Courses des vélos VéloMagg de Montpellier Méditerranée Métropole
--Comptages des vélos et des piétonns issue des compteurs de vélos
--Données de la carte routière (Open Street Map)
+-Comptages des vélos et des piétonns issue des compteurs de vélos  
+-Données de la carte routière (Open Street Map)  
+
 
 ## Rétro-Planning du Projet:
 | Date       |      Étape                                        | Description                                    |
