@@ -27,8 +27,8 @@ L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Mo
 | 06/12 - 12/12| Préparation de la présentation finale       | Élaborer les diapositives et le discours.      |
 | 13/12       | Présentation finale                          | Exposer les résultats du projet.               |
 
-![Description de l'image](![NV_DIA](https://github.com/user-attachments/assets/eaa98539-05db-4503-b23d-622028f25990)
-.png)
+![NV_DIA](https://github.com/user-attachments/assets/87db4c67-5339-40cd-98cf-984552b86b0c)
+
 
 
 
