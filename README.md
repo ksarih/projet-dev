@@ -15,23 +15,12 @@ L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Mo
 -Données de la carte routière (Open Street Map)  
 
 
-## Rétro-Planning du Projet:
-| Date       |      Étape                                        | Description                                    |
-|------------|----------------------------------------------|------------------------------------------------  |
-| 16/10 - 20/10 | Analyse des données existantes              | Identifier et comprendre les besoins du projet.|
-| 21/10 - 25/10 | Collecte de données sur le trafic           | Rassembler les données nécessaires.             |
-| 26/10 - 31/10 | Nettoyage des données                       | Préparer les données pour l'analyse.           |
-| 01/11 - 10/11 | Analyse statistique des données             | Extraire des informations significatives.      |
-| 11/11 - 20/11 | Création des visualisations interactives    | Développer des graphiques et cartes.           |
-| 21/11 - 05/12 | Développement du site web                   | Créer une plateforme pour les visualisations.   |
-| 06/12 - 12/12| Préparation de la présentation finale       | Élaborer les diapositives et le discours.      |
-| 13/12       | Présentation finale                          | Exposer les résultats du projet.               |
 
 
 
+| Date         | Étape                                        | Description                                      |
+|--------------|----------------------------------------------|--------------------------------------------------|
+| 27/09 - 01/10 | Analyse des besoins du projet                | Identifier et comprendre les objectifs.           |
 
-
-
-                                 
 
 
