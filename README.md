@@ -15,7 +15,7 @@ L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Mo
 -Données de la carte routière (Open Street Map)  
 
 
-# Planification du Projet
+## Planification du Projet
 
 Voici le plan détaillé pour la réalisation du projet avec des étapes bien définies et des échéances.
 
