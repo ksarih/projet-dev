@@ -37,3 +37,6 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 | 26/11 - 04/12 | Préparation de la présentation finale       | Élaborer les diapositives et s'entraîner.         |
 | 05/12 - 12/12 | Répétitions et ajustements pour la présentation | Finaliser la présentation orale.              |
 | 13/12        | Présentation finale                          | Exposer les résultats du projet.                  |
+
+![Description de l'image](planification_projet.png)
+
