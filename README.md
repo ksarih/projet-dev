@@ -11,7 +11,7 @@
 ## Description du projet:
 L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Montpellier en utilisiant différents jeux de données:  
 -Courses des vélos VéloMagg de Montpellier Méditerranée Métropole  
--Comptages des vélos et des piétonns issue des compteurs de vélos  
+-Comptagedes vélos et des piétonns issue des compteurs de vélos  
 -Données de la carte routière (Open Street Map)  
 
 
