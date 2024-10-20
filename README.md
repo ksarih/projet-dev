@@ -17,7 +17,7 @@ L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Mo
 
 ## Planification du Projet
 
-Voici le plan détaillé pour la réalisation du projet avec des étapes bien définies et des échéances.
+le plan détaillé pour la réalisation du projet avec des étapes bien définies et des échéances:
 
 
 
