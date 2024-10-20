@@ -21,6 +21,6 @@ L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Mo
 | Date         | Étape                                        | Description                                      |
 |--------------|----------------------------------------------|--------------------------------------------------|
 | 27/09 - 01/10 | Analyse des besoins du projet                | Identifier et comprendre les objectifs.           |
-
+| 02/10 - 06/10 | Analyse des données existantes              | Examiner les données disponibles.                 |
 
 
