@@ -38,5 +38,6 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 | 05/12 - 12/12 | Répétitions et ajustements pour la présentation | Finaliser la présentation orale.              |
 | 13/12        | Présentation finale                          | Exposer les résultats du projet.                  |
 
-http://localhost:6632/planification_projet.html
+
+![planification_projet](https://github.com/user-attachments/assets/f71f37da-73f8-4569-8102-3c3276ac5b03)
 
