@@ -24,7 +24,7 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 | Date         | Étape                                        | Description                                      |
 |--------------|----------------------------------------------|--------------------------------------------------|
 | 27/09 - 01/10 | Analyse des besoins du projet                | Identifier et comprendre les objectifs.          |
-| 02/10 - 06/10 | Analyse des données existantes              | Examiner les données disponibles.                 |
+| 02/10 - 06/10 | Analyse des données existantes              | Collecter et examiner les données disponibles.                 |
 | 07/10 - 11/10 | Collecte de données sur le trafic           | Rassembler les données manquantes.                |
 | 12/10 - 16/10 | Nettoyage des données                       | Préparer les données pour les analyses.           |
 | 17/10 - 21/10 | Analyse préliminaire des données            | Explorer et décrire les tendances principales.    |
