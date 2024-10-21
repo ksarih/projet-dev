@@ -38,11 +38,11 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 | 05/12 - 12/12 | Répétitions et ajustements pour la présentation | Finaliser la présentation orale.              |
 | 13/12        | Présentation finale                          | Exposer les résultats du projet.                  |
 
-## Outils techniques utilisés:
-- Python (avec Pandas, Matplotlib, Seaborn)
-- Quarto pour la création des documents dynamiques et interactifs et la génération des rapports intégrant des visualisations interactives.
-- GitHub pour la gestion de version et le travail collaboratif.
 
 
 ![planification_projet](https://github.com/user-attachments/assets/f71f37da-73f8-4569-8102-3c3276ac5b03)
 
+## Outils techniques utilisés:
+- Python (avec Pandas, Matplotlib, Seaborn)
+- Quarto pour la création des documents dynamiques et interactifs et la génération des rapports intégrant des visualisations interactives.
+- GitHub pour la gestion de version et le travail collaboratif.
