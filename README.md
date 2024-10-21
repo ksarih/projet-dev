@@ -9,11 +9,12 @@
 - **Saint-Chely Kilian** (22210432)
 
 ## Description du projet et résultats attendus:
-L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Montpellier en utilisiant différents jeux de données:  
+L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo sur Montpellier en utilisiant différents jeux de données:  
 -Courses des vélos VéloMagg de Montpellier Méditerranée Métropole.  
 -Comptage des vélos et des piétonns issue des compteurs de vélos  
 -Données de la carte routière (Open Street Map)  
 
+Le but est d'analyser et de visualiser le trafic cycliste à Montpellier en se basant sur les données ci-dessus et les connaissances acquises en cours ce qui nous permettera de créer un site web structuré.
 
 ## Planification du Projet
 
