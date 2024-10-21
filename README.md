@@ -8,10 +8,10 @@
 - **Radouan Naima** (21900536)
 - **Saint-Chely Kilian** (22210432)
 
-## Description du projet:
+## Description du projet et résultats attendus:
 L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Montpellier en utilisiant différents jeux de données:  
--Courses des vélos VéloMagg de Montpellier Méditerranée Métropole  
--Comptagedes vélos et des piétonns issue des compteurs de vélos  
+-Courses des vélos VéloMagg de Montpellier Méditerranée Métropole.  
+-Comptage des vélos et des piétonns issue des compteurs de vélos  
 -Données de la carte routière (Open Street Map)  
 
 
@@ -23,7 +23,7 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 
 | Date         | Étape                                        | Description                                      |
 |--------------|----------------------------------------------|--------------------------------------------------|
-| 27/09 - 01/10 | Analyse des besoins du projet                | Identifier et comprendre les objectifs.           |
+| 27/09 - 01/10 | Analyse des besoins du projet                | Identifier et comprendre les objectifs.          |
 | 02/10 - 06/10 | Analyse des données existantes              | Examiner les données disponibles.                 |
 | 07/10 - 11/10 | Collecte de données sur le trafic           | Rassembler les données manquantes.                |
 | 12/10 - 16/10 | Nettoyage des données                       | Préparer les données pour les analyses.           |
@@ -37,6 +37,11 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 | 26/11 - 04/12 | Préparation de la présentation finale       | Élaborer les diapositives et s'entraîner.         |
 | 05/12 - 12/12 | Répétitions et ajustements pour la présentation | Finaliser la présentation orale.              |
 | 13/12        | Présentation finale                          | Exposer les résultats du projet.                  |
+
+## Outils techniques utilisés:
+- Python (avec Pandas, Matplotlib, Seaborn)
+- Quarto pour la création des documents dynamiques et interactifs et la génération des rapports intégrant des visualisations interactives.
+- GitHub pour la gestion de version et le travail collaboratif.
 
 
 ![planification_projet](https://github.com/user-attachments/assets/f71f37da-73f8-4569-8102-3c3276ac5b03)
