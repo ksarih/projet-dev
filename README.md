@@ -17,7 +17,8 @@ Ce site nous offre des informations détaillées sur les flux enregistrés par l
 Ce lien nous fournit des informations précises sur les déplacements effectués. Ces données incluent les points de départ et d’arrivée des trajets ainsi que les horaires associés, permettant une analyse approfondie des habitudes de mobilité à vélo dans la métropole. Disponibles en formats CSV, JSON et GeoJSON, elles sont facilement exploitables pour divers outils d’analyse et de visualisation. Une API permet également d’accéder aux données en temps réel et à l’historique des trajets, offrant une grande flexibilité aux développeurs et chercheurs. Ces informations sont cruciales pour optimiser le service VéloMagg et améliorer les infrastructures cyclables à Montpellier.  
 
 
--[Open street map data](https://www.openstreetmap.org/#map=11/43.6000/3.8435).
+-[Open street map data](https://www.openstreetmap.org/#map=11/43.6000/3.8435):
+Ce site nous présente un service de cartographie collaborative. En utilisant les coordonnées fournies (43.6000, 3.8435), la carte affiche une zone en France, probablement près de Montpellier. On peut y voir des routes, des bâtiments, des parcs et d'autres infrastructures, avec la possibilité de zoomer et de naviguer dans la région. OpenStreetMap permet aussi aux utilisateurs de contribuer à la cartographie en ajoutant des informations.
 
 
 ## Objectif du projet et résultat attendu:
