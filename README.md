@@ -48,7 +48,6 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 
 
 
-
 ## Outils techniques utilisés:
 - VSCode qui nous permet d'utiliser les outils suivants:
    - Python (avec Pandas, Matplotlib, Seaborn) pour le codage des cartes, du site web.
