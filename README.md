@@ -35,7 +35,7 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 | 02/10 - 06/10 | Collecte des données                        | Collecter et examiner les données disponibles.                 |
 | 07/10 - 11/10 | Nettoyage des données                       | Rassembler les données manquantes.                |
 | 12/10 - 16/10 | Analyse des données                         | Explorer et décrire les tendances principales|
-| 17/10 - 21/10 | Répartition des tâches au sein du groupe    | Exlorer et décrire les tendances principales.    |
+| 17/10 - 21/10 | Répartition des tâches au sein du groupe    | Assigner une tâche à chacun              |
 | 22/10 - 27/10 | Développement du site web (Partie 1)        | Créer la structure initiale du site web.          |
 | 28/10 - 08/11 | Création des visualisations interactives    | Développer des cartes et graphiques interactifs.  |
 | 09/11 - 14/11 | Développement du site web (Partie 2)        | Intégrer les visualisations sur le site web.      |
