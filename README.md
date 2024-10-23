@@ -3,10 +3,10 @@
 
 ## Participants du groupe et numéros étudiants ():
 
-- **Sarih Kaoutar** (22216094)
-- **Bonnefont Lucine** (22108896)
-- **Radouan Naima** (21900536)
-- **Saint-Chely Kilian** (22210432)
+- **[Sarih Kaoutar](https://github.com/ksarih)** (22216094)
+- **[Bonnefont Lucine](https://github.com/LucineBonnefont)** (22108896)
+- **[Radouan Naima](https://github.com/naimaradouan)** (21900536)
+- **[Saint-Chely Kilian](https://github.com/KilianStC)** (22210432)
 
 ## Description des données:
 -[Bike-sharing rides](https://data.montpellier3m.fr/dataset/courses-des-velos-velomagg-de-montpellier-mediterranee-metropole) :
@@ -46,7 +46,7 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 | 05/12 - 12/12 | Répétitions et ajustements pour la présentation | Finaliser la présentation orale.              |
 | 13/12        | Présentation finale                          | Exposer les résultats du projet.                  |
 
-![diagrame _](https://github.com/user-attachments/assets/683777be-babb-4a3c-b245-81593ed0e9c3)
+
 
 
 ## Outils techniques utilisés:
