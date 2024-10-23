@@ -42,7 +42,6 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 
 
 
-![](https://github.com/user-attachments/assets/f71f37da-73f8-4569-8102-3c3276ac5b03)
 
 ## Outils techniques utilisés:
 - Python (avec Pandas, Matplotlib, Seaborn)
