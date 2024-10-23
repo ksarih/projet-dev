@@ -1,6 +1,5 @@
 # Projet d'équipe : Flux de vélos à Montpellier
 
-## Nom du projet: 
 
 ## Participants du groupe et numéros étudiants ():
 
