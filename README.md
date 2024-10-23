@@ -1,8 +1,7 @@
 # Projet d'équipe : Flux de vélos à Montpellier
 
-## Nom du projet: 
 
-## Participants du groupe et numéros étudiant ():
+## Participants du groupe et numéros étudiants ():
 
 - **Sarih Kaoutar** (22216094)
 - **Bonnefont Lucine** (22108896)
@@ -44,9 +43,10 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 
 
 ## Outils techniques utilisés:
-- VSCode qui nous permet d'uilier les outils suivant:
-   - Python (avec Pandas, Matplotlib, Seaborn) pour le codage des cartes, du site web
-   - Quarto pour la création des documents dynamiques et interactifs ainsi que pour la création et le développement du site web
-   - css pour la mise en page du site web, ou encore l'aestétique de la vidéo
+- VSCode qui nous permet d'utiliser les outils suivants:
+   - Python (avec Pandas, Matplotlib, Seaborn) pour le codage des cartes, du site web.
+   - Quarto pour la création des documents dynamiques et interactifs ainsi que pour la création et le développement du site web.
+   - (.css) pour la mise en page du site web, ou encore l'aesthétic de la vidéo.
+   - HTML pour définir la structure et le contenu de chaque page du site web.
 - GitHub pour la gestion de version et le travail collaboratif.
 
