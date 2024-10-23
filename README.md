@@ -1,7 +1,7 @@
-# Projet d'équipe : vélos et vélos en libre-service à Montpellier
+# Projet d'équipe : Flux de vélos à Montpellier
 
 
-## Participants du groupes et leurs numéros étudiants ():
+## Participants du groupe et numéros étudiant ():
 
 - **Sarih Kaoutar** (22216094)
 - **Bonnefont Lucine** (22108896)
@@ -31,4 +31,5 @@ L'objectif de ce projet est d'analyser et de visualiser le trafic à vélo à Mo
 
                                  
 >>>>>>> b54adafb1a4938781ba2363d4f9b626622954075
+
 
