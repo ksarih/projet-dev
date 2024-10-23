@@ -10,11 +10,13 @@
 
 ## Description des données:
 -[Bike-sharing rides](https://data.montpellier3m.fr/dataset/courses-des-velos-velomagg-de-montpellier-mediterranee-metropole) :
-Ce site nous offre des informations détaillées sur les flux enregistrés par les éco-compteurs installés dans la ville. Actualisées quotidiennement, ces données sont disponibles à la fois au niveau journalier et horaire, permettant une analyse précise des tendances de mobilité urbaine. Les formats fournis incluent CSV, JSON et GeoJSON, facilitant leur utilisation dans différents outils d’analyse et de visualisation. Une API permet également l’accès aux données horaires et historiques depuis janvier 2023, offrant une flexibilité accrue aux développeurs et chercheurs. Ces données sont cruciales pour planifier les infrastructures et améliorer les politiques de mobilité durable à Montpellier.
-\n
+Ce site nous offre des informations détaillées sur les flux enregistrés par les éco-compteurs installés dans la ville. Actualisées quotidiennement, ces données sont disponibles à la fois au niveau journalier et horaire, permettant une analyse précise des tendances de mobilité urbaine. Les formats fournis incluent CSV, JSON et GeoJSON, facilitant leur utilisation dans différents outils d’analyse et de visualisation. Une API permet également l’accès aux données horaires et historiques depuis janvier 2023, offrant une flexibilité accrue aux développeurs et chercheurs. Ces données sont cruciales pour planifier les infrastructures et améliorer les politiques de mobilité durable à Montpellier.  
+
+
 -[Cyclist and pedestrian counting](https://data.montpellier3m.fr/dataset/comptages-velo-et-pieton-issus-des-compteurs-de-velo):
-Ce lien nous fournit des informations précises sur les déplacements effectués. Ces données incluent les points de départ et d’arrivée des trajets ainsi que les horaires associés, permettant une analyse approfondie des habitudes de mobilité à vélo dans la métropole. Disponibles en formats CSV, JSON et GeoJSON, elles sont facilement exploitables pour divers outils d’analyse et de visualisation. Une API permet également d’accéder aux données en temps réel et à l’historique des trajets, offrant une grande flexibilité aux développeurs et chercheurs. Ces informations sont cruciales pour optimiser le service VéloMagg et améliorer les infrastructures cyclables à Montpellier.
-\n
+Ce lien nous fournit des informations précises sur les déplacements effectués. Ces données incluent les points de départ et d’arrivée des trajets ainsi que les horaires associés, permettant une analyse approfondie des habitudes de mobilité à vélo dans la métropole. Disponibles en formats CSV, JSON et GeoJSON, elles sont facilement exploitables pour divers outils d’analyse et de visualisation. Une API permet également d’accéder aux données en temps réel et à l’historique des trajets, offrant une grande flexibilité aux développeurs et chercheurs. Ces informations sont cruciales pour optimiser le service VéloMagg et améliorer les infrastructures cyclables à Montpellier.  
+
+
 -Open street map data.
 
 
