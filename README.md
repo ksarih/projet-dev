@@ -5,7 +5,7 @@
 
 - **Sarih Kaoutar** (22216094)
 - **Bonnefont Lucine** (22108896)
-- **Radouan Naima** (21900536)
+- [naimaradouan](https://github/naimaradouan)
 - **Saint-Chely Kilian** (22210432)
 
 ## Description du projet et résultats attendus:
