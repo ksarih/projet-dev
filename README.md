@@ -1,8 +1,8 @@
-# Projet d'équipe : vélos et vélos en libre-service à Montpellier
+# Projet d'équipe : Flux de vélos à Montpellier
 
 ## Nom du projet: 
 
-## Participants du groupes et leurs numéros étudiants ():
+## Participants du groupe et numéros étudiant ():
 
 - **Sarih Kaoutar** (22216094)
 - **Bonnefont Lucine** (22108896)
@@ -47,3 +47,4 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 - Python (avec Pandas, Matplotlib, Seaborn)
 - Quarto pour la création des documents dynamiques et interactifs et la génération des rapports intégrant des visualisations interactives.
 - GitHub pour la gestion de version et le travail collaboratif.
+
