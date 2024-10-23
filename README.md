@@ -45,7 +45,9 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 ![](https://github.com/user-attachments/assets/f71f37da-73f8-4569-8102-3c3276ac5b03)
 
 ## Outils techniques utilisés:
-- Python (avec Pandas, Matplotlib, Seaborn)
-- Quarto pour la création des documents dynamiques et interactifs et la génération des rapports intégrant des visualisations interactives.
+- VSCode qui nous permet d'uilier les outils suivant:
+   - Python (avec Pandas, Matplotlib, Seaborn) pour le codage des cartes, du site web
+   - Quarto pour la création des documents dynamiques et interactifs ainsi que pour la création et le développement du site web
+   - css pour la mise en page du site web, ou encore l'aestétique de la vidéo
 - GitHub pour la gestion de version et le travail collaboratif.
 
