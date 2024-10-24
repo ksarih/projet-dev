@@ -22,7 +22,8 @@ Ce site nous présente un service de cartographie collaborative. En utilisant le
 
 
 ## Objectif du projet et résultat attendu:
-
+Le but de ce projet est d'analyser les données ci-dessus afin de créer des visualisations, idéalement interactives, à travers un site web pour explorer ces données. Les résultats attendus incluent une carte interactive prédictive du trafic des vélos et une vidéo illustrant l'évolution des trajets.
+Ce projet évalue les compétences en gestion de données, développement web, et collaboration en équipe via GitHub.
 ## Planification du Projet:
 
 le plan détaillé pour la réalisation du projet avec des étapes bien définies et des échéances:
