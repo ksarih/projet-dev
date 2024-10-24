@@ -49,7 +49,7 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 ![diagramme_n](https://github.com/user-attachments/assets/f37713fe-6442-4f22-a45d-e4a508b10a79)
 
 ## Outils techniques utilisés:
-- VSCode qui nous permet d'utiliser les outils suivants:
+- `VSCode` qui nous permet d'utiliser les outils suivants:
    - Python (avec Pandas, Matplotlib, Seaborn) pour le codage des cartes, du site web.
    - Quarto pour la création des documents dynamiques et interactifs ainsi que pour la création et le développement du site web.
    - (.css) pour la mise en page du site web, ou encore l'aesthétic de la vidéo.
