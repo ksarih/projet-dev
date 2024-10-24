@@ -46,9 +46,7 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
 | 05/12 - 12/12 | Répétitions et ajustements pour la présentation | Finaliser la présentation orale.              |
 | 13/12        | Présentation finale                          | Exposer les résultats du projet.                  |
 
-
-
-
+![diagramme_n](https://github.com/user-attachments/assets/f37713fe-6442-4f22-a45d-e4a508b10a79)
 
 ## Outils techniques utilisés:
 - VSCode qui nous permet d'utiliser les outils suivants:
