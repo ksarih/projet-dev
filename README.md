@@ -58,8 +58,3 @@ le plan détaillé pour la réalisation du projet avec des étapes bien définie
    - HTML pour définir la structure et le contenu de chaque page du site web.
 - GitHub pour la gestion de version et le travail collaboratif.
 
-## Résultats attendus
-A travers ce projet, nous allons créer un site web ayant pour but de prévoir et d'indiquer le flux de vélos à Montpellier.
-Celui ci sera muni d'une carte intéractive prédisant le trafic à vélo en fonction de l'heure, du jour ou encore du moment dans l'année. 
-Nous souhaitons également ajouter d'autres éléments intéractifs, comme une vidéo qui représenterait d'une autre manière le trafic cycliste dans la ville.
-
