@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trafic à Vélo à Montpellier</title>
+    <!-- Inclure la feuille de style Leaflet pour la carte -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css"> <!-- Inclure le fichier CSS -->
+</head>
+<body>
+    <!-- En-tête du site -->
+    <header>
+        <h1>Trafic à Vélo à Montpellier</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#map">Carte Interactive</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section À propos -->
+    <section id="about">
+        <h2>À Propos du Trafic à Vélo à Montpellier</h2>
+        <p>Suivez le trafic à vélo en direct à Montpellier, découvrez les pistes cyclables, les stations de vélos, et signalez des incidents.</p>
+    </section>
+
+    <!-- Section Carte interactive -->
+    <section id="map-container">
+        <h2>Carte Interactive</h2>
+        <div id="map"></div> <!-- Carte interactive ici -->
+    </section>
+
+    <!-- Formulaire de contact -->
+    <section id="contact">
+        <h2>Signalez un Incident</h2>
+        <form action="#" method="post">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="incident">Description de l'incident:</label>
+            <textarea id="incident" name="incident" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Trafic à Vélo à Montpellier. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Inclure la bibliothèque JavaScript Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script>
+        // Initialisation de la carte
+        var map = L.map('map').setView([43.6119, 3.8772], 13); // Centrée sur Montpellier
+
+        // Ajouter les tuiles OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Ajouter un marqueur à la Place de la Comédie
+        var marker = L.marker([43.610769, 3.876716]).addTo(map);
+        marker.bindPopup("<b>Place de la Comédie</b><br>Un point central pour les cyclistes.").openPopup();
+
+        // Zone de circulation dense
+        var circle = L.circle([43.6119, 3.8772], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(map);
+        circle.bindPopup("Zone de circulation dense à vélo.");
+    </script>
+</body>
+</html>
