@@ -1,0 +1,23 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - feature-website  # ou main si c'est la branche par défaut
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v2
+      
+      - name: Build and deploy with Quarto
+        run: quarto render  # adapte si nécessaire pour construire le site
+      
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
