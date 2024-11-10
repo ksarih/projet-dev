@@ -14,7 +14,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2      
+        
+      - name: Set up ffmpeg  # Mise en place du module pour créer des vidéos
+        uses: FedericoCarboni/setup-ffmpeg@v3
+
+      - name: Install Python and Dependencies # Instalation de Python + des librairies nécessaires (inclues dans requirements.txt)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+      - run: python -m pip install --upgrade pip
+      - run: pip install jupyter
+      - run: pip install -r requirements.txt
       
       - name: Build and deploy with Quarto
         run: quarto render  # adapte si nécessaire pour construire le site
