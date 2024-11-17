@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - feature-website
+      - main
 
 jobs:
   build-deploy:
@@ -14,8 +14,6 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-        with:
-          ref: feature-website
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
