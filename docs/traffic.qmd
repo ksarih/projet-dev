@@ -6,7 +6,7 @@ execute:
 jupyter: python3
 ---
 
-Simulation du traffic de vélo dans Montpellier il y a un mois.
+Simulation du traffic de vélo dans Montpellier sur la journée du mois dernier.
 
 
 ```{python}
@@ -21,7 +21,7 @@ locale.setlocale(locale.LC_TIME,'')
 
 # simulation_date = '2024-09-30'
 simulation_date = datetime.date.today() + relativedelta(months=-1)
-print(f'Journée du {simulation_date.strftime("%d %B %Y")}')
+print(f'Journée du {simulation_date.strftime("%d/%m/%Y")}')
 
 # Retrieve stations and routes
 stations, trajets = get_bike_data(simulation_date)
