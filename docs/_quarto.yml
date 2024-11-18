@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: .   # Dossier racine
+
+website:
+  title: "Flux de vélos à Montpellier"
+  navbar:
+    left:
+      - text: "Montpelli'Cycle"
+        href: accueil.qmd
+      - text: "Prévisions"
+        href: index.qmd
+      - text: "Densité du traffic"
+        href: density.qmd
+      - text: "Traffic"
+        href: traffic.qmd
+      - text: "Disponibilité des vélos"
+        href: dispo.qmd
+      - text: "données"
+        href: contact.qmd
+
+output:
+    html:
+      theme: cosmo
+      css: styles/custom.css
+      toc: true
