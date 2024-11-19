@@ -1,55 +1,88 @@
 import numpy as np
 import pandas as pd
-import tkinter as tk
 import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 import geopandas as gpd
 from shapely.geometry import Point
-import osmnx as ox
- 
-data2 = pd.read_csv('MMM_MMM_GeolocCompteurs.csv')       # Chargement du Fichier CSV
+
+# Chargement du Fichier CSV
+data2 = pd.read_csv('MMM_MMM_GeolocCompteurs.csv')
+
 # Conversion des Colonnes de Latitude et Longitude au Format Numérique
 data2['Latitude'] = pd.to_numeric(data2['Latitude'], errors='coerce')
 data2['Longitude'] = pd.to_numeric(data2['Longitude'], errors='coerce')
 
-
+# Création d'une GeoDataFrame
 gdf = gpd.GeoDataFrame(
-    data2, geometry=gpd.points_from_xy(data2.Longitude, data2.Latitude))
+    data2, geometry=gpd.points_from_xy(data2.Longitude, data2.Latitude)
+)
 
 # Définition du Système de Coordonnées (WGS84)
 gdf.set_crs(epsg=4326, inplace=True)
 
 # Tracé des Points sur une Carte avec des Informations Supplémentaires
+fig, ax = plt.subplots(figsize=(8, 8))  # Réduire la taille du graphique
+
+# Tracer les points avec des couleurs différentes
 colors = plt.cm.rainbow(np.linspace(0, 1, len(gdf)))
-fig, ax = plt.subplots(figsize=(15, 15))
-gdf.plot(ax=ax, color='darkgreen', markersize=50)
+scatter = ax.scatter(gdf.geometry.x, gdf.geometry.y, color=colors, s=50)
 
-# Créer une légende avec les noms des compteurs et le nombre de vélos disponibles
-legend_labels = []
-colors = ['blue'] * len(gdf)  # Create a list of colors matching the number of points
+# Ajouter des infobulles pour afficher la légende lorsque la souris survole les points du graphique
+annot = ax.annotate("", xy=(0,0), xytext=(20,20),
+                    textcoords="offset points",
+                    bbox=dict(boxstyle="round", fc="w"),
+                    arrowprops=dict(arrowstyle="->"))
+annot.set_visible(False)
 
-for i, (label, bikes) in enumerate(zip(gdf['Nom du com'], gdf['N° Série'])):
-    ax.plot(gdf.geometry.x[i], gdf.geometry.y[i], 'o', color=colors[i], markersize=10)
-    legend_labels.append(f"{label} ({bikes} vélos)")
+def update_annot(ind):
+    pos = scatter.get_offsets()[ind["ind"][0]]
+    annot.xy = pos
+    text = f"{gdf['Nom du com'].iloc[ind['ind'][0]]} ({gdf['N° Série'].iloc[ind['ind'][0]]} vélos)"
+    annot.set_text(text)
+    annot.get_bbox_patch().set_facecolor('lightblue')
+    annot.get_bbox_patch().set_alpha(0.8)
 
-handles = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='blue', 
-                      markersize=10, label=label) for label in legend_labels]
-ax.legend(handles=handles, title="Compteurs de Vélo", loc='upper right', 
-          bbox_to_anchor=(1.3, 1))
+def hover(event):
+    vis = annot.get_visible()
+    if event.inaxes == ax:
+        cont, ind = scatter.contains(event)
+        if cont:
+            update_annot(ind)
+            annot.set_visible(True)
+            fig.canvas.draw_idle()
+        else:
+            if vis:
+                annot.set_visible(False)
+                fig.canvas.draw_idle()
 
+fig.canvas.mpl_connect("motion_notify_event", hover)
+
+# Ajouter un titre et des axes
 plt.title('Localisation des Compteurs de Vélo à Montpellier')
 plt.xlabel('Longitude')
 plt.ylabel('Latitude')
 
-# Ajouter une petite légende avec le graphe
-plt.figtext(0.5, 0.01, 
-            "Les points représentent les compteurs de vélo et leurs positions exactes dans la ville de Montpellier", 
-            wrap=True, horizontalalignment='center', fontsize=12)
+# Ajouter un texte explicatif sous la carte
+plt.figtext(
+    0.5, 0.01,
+    "Les points représentent les compteurs de vélo et leurs positions exactes tout au long de Montpellier.",
+    wrap=True, horizontalalignment='center', fontsize=12
+)
 
 # Sauvegarder la figure dans un fichier
-plt.savefig('figure_with_legend.png', bbox_inches='tight')
+plt.savefig('figure_with_tooltips.png', bbox_inches='tight')
+
+# Afficher la carte avec infobulles
 plt.show()
+
+# Exemple de fonction pour récupérer et tracer des données supplémentaires (si définie)
+def get_bike_data(date):
+    # Exemple de fonction fictive pour obtenir des données
+    return data2
+
+def plot_bike_data(data):
+    print(f"Tracé des données de vélo pour la date : {data}")
 
 data2 = get_bike_data('2023-01-01')
 plot_bike_data(data2)
