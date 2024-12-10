@@ -42,13 +42,6 @@
     "text": "Prévision de la densité de circulation pour demain.\n\n\nJournée du 11/12/2024\n\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook"
   },
   {
-    "objectID": "etude.html",
-    "href": "etude.html",
-    "title": "Étude",
-    "section": "",
-    "text": "import numpy as np\nimport pandas as pd\nimport plotly.graph_objects as go\n\n# Chargement du Fichier CSV\ndata2 = pd.read_csv('data/MMM_MMM_GeolocCompteurs.csv')\n\n# Conversion des Colonnes de Latitude et Longitude au Format Numérique\ndata2['Latitude'] = pd.to_numeric(data2['Latitude'], errors='coerce')\ndata2['Longitude'] = pd.to_numeric(data2['Longitude'], errors='coerce')\n\n# Création de la figure Plotly\nfig = go.Figure()\n\n# Ajout des points sur le graphique avec des infobulles\nfig.add_trace(go.Scatter(\n    x=data2['Longitude'],\n    y=data2['Latitude'],\n    text=data2.apply(lambda row: f\"{row['Nom du com']} ({row['N° Série']} vélos)\", axis=1),\n    mode='markers',\n    marker=dict(\n        size=8,\n        color=np.linspace(0, 1, len(data2)),  # Utilisation de linspace pour générer des couleurs différentes\n        colorscale='Rainbow',\n        showscale=True\n    )\n))\n\n# Mise en page du graphique\nfig.update_layout(\n    title='Localisation des Compteurs de Vélo à Montpellier',\n    xaxis_title='Longitude',\n    yaxis_title='Latitude',\n    annotations=[\n        dict(\n            x=0.5,\n            y=-0.1,\n            xref='paper',\n            yref='paper',\n            text=\"Les points représentent les compteurs de vélo et leurs positions exactes tout au long de Montpellier.\",\n            showarrow=False,\n            font=dict(size=12)\n        )\n    ]\n)\n\n# Sauvegarder la figure dans un fichier HTML\nhtml_file = \"OCP.html\"\nfig.write_html(html_file)\n\n#'2023-01-01'"
-  },
-  {
     "objectID": "etude.html#visualisation-des-compteurs-de-vélo",
     "href": "etude.html#visualisation-des-compteurs-de-vélo",
     "title": "Étude",
