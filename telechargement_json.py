@@ -39,3 +39,21 @@ print(data_1_2)
 
 print("Contenu du fichier VilleMTP_MTP_Quartiers.json :")
 print(data_2)
+"""
+Ce script télécharge des fichiers JSON à partir de deux URLs spécifiées, les sauvegarde dans un cache local,
+et charge ensuite leur contenu pour pouvoir l'utiliser.
+
+Les fichiers JSON sont :
+- 6_2022.json et 6_2024.json qui contiennent des données sur les comptages de vélos et de piétons.
+- VilleMTP_MTP_Quartiers.json qui contient des informations sur les quartiers de la ville de Montpellier.
+
+Le script utilise la bibliothèque `pooch` pour gérer le cache des fichiers téléchargés.
+Les données sont ensuite lues et affichées à l'écran.
+
+URLs des fichiers :
+- url_1 : Comptages de vélos et de piétons
+- url_2 : Quartiers de la ville de Montpellier
+
+Le cache est configuré pour stocker les fichiers dans un répertoire spécifique et garantir que les fichiers ne soient téléchargés qu'une seule fois.
+"""
+
