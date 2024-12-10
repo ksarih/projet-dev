@@ -66,70 +66,74 @@ Nous utilisons les données géographiques d’OpenStreetMap pour générer des 
 ## Architecture du Projet 
 
 ```python 
-
-├── .github/workflows/
-│     ├── deploy.yml
-│     ├── update_bikes_dispos.yml
-│     └── update_simulations.yml
+├── .github/
+│   └── workflows/
+│       ├── deploy.yml
+│       ├── update_bikes_dispos.yml
+│       └── update_simulations.yml
 ├── data/
-│     ├── MMM_MMM_GeolocCompteurs.csv
-│     └── TAM_MMM_CoursesVelomagg.csv
+│   ├── MMM_MMM_GeolocCompteurs.csv
+│   ├── TAM_MMM_CoursesVelomagg.csv
 ├── docs/
-│     ├── cache/
-│     │     └── Commit changes before pull from remote
-│     ├── data/
-│     │     ├── 6_2022.json
-│     │     ├── 6_2024.json
-│     │     ├── MMM_MMM_GeolocCompteurs.csv
-│     │     ├── TAM_MMM_CoursesVelomagg.csv
-│     │     └── VilleMTP_MTP_Quartiers.json
-│     ├── images/
-│     │     ├── fontaine-place-comedie-montpellier.webp
-│     │     └── logo.png
-│     ├── site_libs/
-│     │     └── page d'accueil
-│     ├── styles/
-│     │     └── custom.css
-│     ├── .gitignore
-│     ├── OCP.html
-│     ├── _quarto.yml
-│     ├── license.html
-│     ├── bike_data.py
-│     ├── compteurs.py
-│     ├── density.html
-│     ├── density.py
-│     ├── density.qmd
-│     ├── dispo.html
-│     ├── dispo.qmd
-│     ├── donnees.html
-│     ├── donnees.qmd
-│     ├── etude.html
-│     ├── etude.qmd
-│     ├── graphe_velib.py
-│     ├── index.html
-│     ├── index.qmd
-│     ├── intensite_traffics_map.png
-│     ├── license.qmd
-│     ├── previsions.py
-│     ├── search.json
-│     ├── simulation.py
-│     ├── trafic.html
-│     ├── trafic.ipynb
-│     └── trafic.qmd
+│   ├── cache/
+│   ├── data/
+│   │   ├── 6_2022.json
+│   │   ├── 6_2024.json
+│   │   ├── MMM_MMM_GeolocCompteurs.csv
+│   │   ├── TAM_MMM_CoursesVelomagg.csv
+│   │   └── VilleMTP_MTP_Quartiers.json
+│   ├── images/
+│   │   ├── fontaine-place-comedie-montpellier.webp
+│   │   └── logo.png
+│   ├── site_libs/
+│   ├── styles/
+│   │   └── custom.css
+│   ├── .gitignore
+│   ├── OCP.html
+│   ├── __init__.py
+│   ├── _quarto.yml
+│   ├── bike_data.py
+│   ├── carte.py
+│   ├── compteurs.py
+│   ├── density.html
+│   ├── density.py
+│   ├── dispo.html
+│   ├── dispo.qmd
+│   ├── donnees.html
+│   ├── donnees.qmd
+│   ├── etude.html
+│   ├── etude.qmd
+│   ├── graphe_velib.py
+│   ├── index.html
+│   ├── index.qmd
+│   ├── intensite_traffics_map.png
+│   ├── license.html
+│   ├── license.qmd
+│   ├── previsions.html
+│   ├── previsions.py
+│   ├── previsions.qmd
+│   ├── search.json
+│   ├── simulation.py
+│   ├── trafic.html
+│   ├── trafic.ipynb
+│   └── trafic.qmd
 ├── documentation/
-│     ├── source/
-│     │     └── ajout du sphinx ext
-│     ├── Makefile
-│     ├── make.bat
+│   ├── source/
+│   │   └── ajout du sphinx ext
+│   ├── Makefile
+│   ├── make.bat
 ├── previsions/
-│     ├── prevision 01-05-2024.html
-│     ├── prevision 14-11-2024.html
-│     ├── prevision 25-12-2024.html
-│     ├── reel 01-05-2024.html
-│     └── reel 14-11-2024.html
+│   ├── prevision 01-05-2024.html
+│   ├── prevision 14-11-2024.html
+│   ├── prevision 25-12-2024.html
+│   ├── reel 01-05-2024.html
+│   └── reel 14-11-2024.html
 ├── roadmap/
-│     ├── README.qmd
-│     └── diagramme.md
+│   ├── README.qmd
+│   └── diagramme.md
+├── tests/
+│   ├── test_density.py
+│   └── test_simulation.py
 ├── .Rhistory
 ├── .gitignore
 ├── fetch_data.py
@@ -139,6 +143,7 @@ Nous utilisons les données géographiques d’OpenStreetMap pour générer des 
 ├── index.html
 ├── requirements.txt
 └── telechargement_json.py
+
 ```
 
 ---
