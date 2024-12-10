@@ -28,7 +28,7 @@ fig.add_trace(go.Scatter(
 
 # Mise en page du graphique
 fig.update_layout(
-    title='Localisation des Compteurs de Vélo à Montpellier',
+    title=None,  
     xaxis_title='Longitude',
     yaxis_title='Latitude',
     annotations=[
@@ -37,7 +37,7 @@ fig.update_layout(
             y=-0.1,
             xref='paper',
             yref='paper',
-            text="Les points représentent les compteurs de vélo et leurs positions exactes tout au long de Montpellier.",
+            text="",
             showarrow=False,
             font=dict(size=12)
         )
