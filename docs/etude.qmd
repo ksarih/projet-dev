@@ -29,7 +29,7 @@ import matplotlib.pyplot as plt
 from shapely.geometry import Point
 
 # Charger les données des quartiers (GeoJSON ou shapefile)
-quartiers_gdf = gpd.read_file('VilleMTP_MTP_Quartiers.json')
+quartiers_gdf = gpd.read_file('data/VilleMTP_MTP_Quartiers.json')
 
 def calculer_intensite_moyenne(file_path, quartiers_gdf):
     # Charger les données de vélo avec les intensités et dates
@@ -64,8 +64,8 @@ def calculer_intensite_moyenne(file_path, quartiers_gdf):
     )
 
 # Calculer les intensités pour 2023 et 2024
-quartiers_gdf_2022 = calculer_intensite_moyenne('6_2022.json', quartiers_gdf.copy())
-quartiers_gdf_2024 = calculer_intensite_moyenne('6_2024.json', quartiers_gdf.copy())
+quartiers_gdf_2022 = calculer_intensite_moyenne('data/6_2022.json', quartiers_gdf.copy())
+quartiers_gdf_2024 = calculer_intensite_moyenne('data/6_2024.json', quartiers_gdf.copy())
 
 #print(quartiers_gdf_2022)
 #print(quartiers_gdf_2024)
