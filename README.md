@@ -3,7 +3,7 @@
 ## Description  
 Ce projet propose une exploration approfondie du trafic cycliste à Montpellier. Grâce à des données collectées auprès des éco-compteurs, des trajets VéloMagg et des cartes OpenStreetMap, il met en lumière les habitudes des cyclistes à travers :  
 - **Cartes interactives** pour visualiser le trafic et planifier des itinéraires.  
-- **Analyses comparatives** avec des vidéos du trafic enregistrées dans le passé.  
+- **Visualisation du trafic** à travers une vidéo.  
 - **Informations en temps réel** sur la disponibilité des vélos et stations VéloMagg.  
 - **Statistiques détaillées** des quartiers les plus fréquentés par les cyclistes.  
 
