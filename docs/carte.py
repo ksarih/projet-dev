@@ -80,7 +80,7 @@ for _, row in quartiers_gdf_2022.iterrows():
         'fillOpacity': row['intensity'] / quartiers_gdf_2022['intensity'].max()  # Échelle d'opacité
     }
     folium.GeoJson(
-        row['geometry']._geo_interface_,
+        row['geometry'].__geo_interface__,
         style_function=lambda x, style=style: style
     ).add_to(m_2022)
 
@@ -104,7 +104,7 @@ for _, row in quartiers_gdf_2024.iterrows():
         'fillOpacity': row['intensity'] / quartiers_gdf_2024['intensity'].max()
     }
     folium.GeoJson(
-        row['geometry']._geo_interface_,
+        row['geometry'].__geo_interface__,
         style_function=lambda x, style=style: style
     ).add_to(m_2024)
 for _, row in quartiers_gdf_2024.iterrows():
