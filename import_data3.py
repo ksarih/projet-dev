@@ -1,5 +1,5 @@
 # Charger les données de vélo avec les intensités et dates
-df_velo = pd.read_json(file_path)
+df_velo = pd.read_json('data/VilleMTP_MTP_Quartiers.json')
 # Extraire les coordonnées de latitude et longitude des points
 df_velo['longitude'] = df_velo['location'].apply(lambda x: x['coordinates'][0])
 df_velo['latitude'] = df_velo['location'].apply(lambda x: x['coordinates'][1])
