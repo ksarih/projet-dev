@@ -4,18 +4,18 @@
 À Montpellier, le vélo est une option de transport écologique et populaire. Ce projet se concentre sur l'analyse et la visualisation du trafic cycliste dans la ville. Les objectifs incluent :  
 - Prévoir les flux cyclistes à partir des données historiques.  
 - Fournir des visualisations interactives pour une exploration approfondie.  
-- Offrir des données en temps réel sur les vélos disponibles et les trajets cyclistes.  
+- Offrir des données en temps réel sur les vélos et places disponibles.  
 
 L'ensemble des résultats et des outils est accessible sur notre site web, permettant aux utilisateurs d'explorer et de comprendre les déplacements à vélo.  
 
 👉 Consultez la page principale : [site web](https://lucinebonnefont.github.io/projet-dev/)  
-👉 Consultez la documentation complète : [Documentation détaillée](documentation/??????)  
+👉 Consultez la documentation complète : [Documentation détaillée]([documentation/??????](file://wsl.localhost/Ubuntu-20.04/home/ksarih/projet-dev/documentation/build/html/docs.html#))  
 
 ---
 
 ## Objectifs du Projet  
 - **Analyse du trafic cycliste** : Étudier les flux de vélos et identifier les tendances principales.  
-- **Prévisions et prédictions** : Anticiper le trafic pour améliorer la planification des trajets.  
+- **Prévisions** : Anticiper le trafic pour améliorer la planification des trajets.  
 - **Disponibilité des vélos en temps réel** : Informer les utilisateurs sur la disponibilité des vélos Vélomagg dans la ville.  
 - **Cartographie interactive** : Intégrer des outils interactifs comme **Leaflet.js** pour une exploration visuelle intuitive.  
 
@@ -28,7 +28,7 @@ Notre site exploite des données ouvertes fournies par la Métropole de Montpell
 
 Ces données recensent les trajets effectués entre les stations VéloMagg depuis mai 2021. Elles nous permettent de :  
 - Cartographier les itinéraires les plus fréquentés.  
-- Analyser les tendances et horaires des déplacements.  
+- Analyser les tendances des déplacements.  
 - Proposer des prévisions de trafic pour optimiser vos trajets.  
 
 ### 2. Comptages des vélos et piétons par éco-compteurs  
@@ -172,7 +172,7 @@ Nous utilisons les données géographiques d’OpenStreetMap pour générer des 
 - **Gestion des données** : Import, nettoyage et analyse des bases de données.
 - **Diagramme de Gantt** : Planification et suivi des étapes clés du projet.  
 - **Cartographie interactive** : Génération de cartes dynamiques pour représenter les flux.  
-- **Création du site Web** : Développement avec Quarto et intégration des résultats.  
+- **Création et gestion du site Web** : Développement avec Quarto et intégration des résultats.  
 
 ---
 
