@@ -5,185 +5,45 @@ css: styles/custom.css
 ---
 ![ ](images/logo.png){style="position: absolute; top: 20px; left: 20px; width: 150px; height: auto;"}
 
-<div class="etude-section">
 
-### 🚴 Quels sont les quartiers de Montpellier les plus adeptes du vélo ?  
+### Quels sont les quartiers de Montpellier les plus adeptes du vélo ?  
 
-Avec une prise de conscience écologique croissante, de plus en plus d’habitants se tournent vers des modes de transport respectueux de l’environnement. Mais **quels quartiers de Montpellier montrent l’exemple en adoptant le vélo au quotidien ?**  
+Avec une prise de conscience écologique croissante, de plus en plus d’habitants se tournent vers des modes de transport respectueux de l’environnement. Mais *quels quartiers de Montpellier montrent l’exemple en adoptant le vélo au quotidien ?*  
 
-### 📊 Étude des intensités moyennes de trafic  
-Nous avons analysé les intensités moyennes de trafic pour les mois de juin à novembre, comparant les données de **2022** et **2024**. Cette étude vise à identifier les tendances cyclistes et les quartiers les plus actifs.  
-  
-  - Les quartiers comme **Hôpitaux-Facultés** et **Port Marianne** se démarquent par des valeurs élevées en 2022, mais montrent une baisse significative en 2024 :
-    - *Hôpitaux-Facultés* : 730.11 → 724.07  
-    - *Port Marianne* : 943.00 → 812.28  
-  - Les quartiers **Croix d'Argent** et **Centre** enregistrent également une diminution, mais restent parmi les zones avec des intensités élevées.  
-  - Les secteurs comme **Prés d'Arènes** et **Mosson** ont des valeurs relativement faibles, avec une baisse marquée en 2024.  
+Nous avons mené une *étude* pour analyser cette évolution. Découvrez :  
+- *Les tendances d’utilisation des vélos en 2022*
+- *Les changements observés en 2024*  
 
+*Lequel de ces quartiers sera en tête du mouvement écologique ?* 
 
-```{python}
+*Et si c’était le vôtre ?* Inspirons-nous les uns les autres pour faire de *Montpellier* une ville toujours plus verte et accueillante pour les cyclistes ! 🌿
 
-import geopandas as gpd
-import pandas as pd
-import matplotlib.pyplot as plt
-from shapely.geometry import Point
+::: {.container .row}
 
-# Charger les données des quartiers (GeoJSON ou shapefile)
-quartiers_gdf = gpd.read_file('data/VilleMTP_MTP_Quartiers.json')
+::: {.col-sm-6}
+### Carte 2022
+<iframe
+    src="intensite_2022.html"
+    width="100%"
+    height="600px"
+    frameborder="0"
+    scrolling="no">
+</iframe>
+:::
 
-def calculer_intensite_moyenne(file_path, quartiers_gdf):
-    # Charger les données de vélo avec les intensités et dates
-    df_velo = pd.read_json(file_path)
+::: {.col-sm-6}
+### Carte 2024
+<iframe
+    src="intensite_2024.html"
+    width="100%"
+    height="600px"
+    frameborder="0"
+    scrolling="no">
+</iframe>
+:::
 
-    # Extraire les coordonnées de latitude et longitude des points
-    df_velo['longitude'] = df_velo['location'].apply(lambda x: x['coordinates'][0])
-    df_velo['latitude'] = df_velo['location'].apply(lambda x: x['coordinates'][1])
+:::
 
-    # Créer la colonne geometry pour le GeoDataFrame
-    geometry = [Point(xy) for xy in zip(df_velo['longitude'], df_velo['latitude'])]
-    gdf_velo = gpd.GeoDataFrame(df_velo, geometry=geometry, crs=quartiers_gdf.crs)
-
-    # Associer les points de vélo aux quartiers
-    gdf_joined = gpd.sjoin(gdf_velo, quartiers_gdf, how="inner", predicate="intersects")
-
-    # Calculer la moyenne journalière par quartier et par date
-    gdf_joined['start_date'] = gdf_joined['dateObserved'].apply(lambda x: x.split('/')[0])
-    gdf_joined['start_date'] = pd.to_datetime(gdf_joined['start_date'])
-
-    moyennes_quartiers = (
-        gdf_joined.groupby(['name', 'start_date'])
-        .agg({'intensity': 'mean'})
-        .reset_index()
-    )
-
-    # Fusionner avec les données des quartiers pour les visualisations
-    return quartiers_gdf.merge(
-        moyennes_quartiers.groupby('name').agg({'intensity': 'mean'}).reset_index(),
-        on='name',
-        how='left'
-    )
-
-# Calculer les intensités pour 2023 et 2024
-quartiers_gdf_2022 = calculer_intensite_moyenne('data/6_2022.json', quartiers_gdf.copy())
-quartiers_gdf_2024 = calculer_intensite_moyenne('data/6_2024.json', quartiers_gdf.copy())
-
-#print(quartiers_gdf_2022)
-#print(quartiers_gdf_2024)
-# Trouver la plage commune des intensités
-intensite_min = min(quartiers_gdf_2022['intensity'].min(), quartiers_gdf_2024['intensity'].min())
-intensite_max = max(quartiers_gdf_2022['intensity'].max(), quartiers_gdf_2024['intensity'].max())
-
-# Création de la figure avec deux sous-cartes
-fig, axes = plt.subplots(1, 2, figsize=(18, 8), subplot_kw={'aspect': 'equal'})
-
-# Visualisation des intensités pour 2022
-quartiers_gdf_2022.plot(
-    column='intensity',
-    cmap='Reds',
-    legend=False,  # Désactiver la légende ici
-    ax=axes[0],
-    vmin=intensite_min,
-    vmax=intensite_max
-)
-axes[0].set_title("Intensité moyenne du trafic - 2022")
-for x, y, label in zip(
-    quartiers_gdf_2022.geometry.centroid.x,
-    quartiers_gdf_2022.geometry.centroid.y,
-    quartiers_gdf_2022['name']
-):
-    axes[0].text(x, y, label, fontsize=8, ha='center', color='black')
-
-# Visualisation des intensités pour 2024
-quartiers_gdf_2024.plot(
-    column='intensity',
-    cmap='Reds',
-    legend=False,  # Désactiver la légende ici
-    ax=axes[1],
-    vmin=intensite_min,
-    vmax=intensite_max
-)
-axes[1].set_title("Intensité moyenne du trafic - 2024")
-for x, y, label in zip(
-    quartiers_gdf_2024.geometry.centroid.x,
-    quartiers_gdf_2024.geometry.centroid.y,
-    quartiers_gdf_2024['name']
-):
-    axes[1].text(x, y, label, fontsize=8, ha='center', color='black')
-
-# Ajouter une légende commune
-cbar_ax = fig.add_axes([0.92, 0, 0.02, 0.95])  # Position de la barre de couleur
-sm = plt.cm.ScalarMappable(cmap='Reds', norm=plt.Normalize(vmin=intensite_min, vmax=intensite_max))
-cbar = fig.colorbar(sm, cax=cbar_ax)
-cbar.set_label("Intensité moyenne", fontsize=12)
-
-plt.tight_layout(rect=[0, 0, 0.9, 1])  # Ajuster pour laisser la place à la légende
-
-# Sauvegarder l'image de la carte
-plt.savefig('intensite_traffics_map.png', dpi=300)
-plt.close()
-```
-### 🌟 **Quel quartier sera en tête du mouvement écologique ?**  
-
-**Et si c’était le vôtre ?** Inspirons-nous les uns les autres pour faire de **Montpellier** une ville toujours plus verte et accueillante pour les cyclistes ! 🌿  
-
-</div>
-
-
-
-```{python}
-import numpy as np
-import pandas as pd
-import plotly.graph_objects as go
-
-# Chargement du Fichier CSV
-data2 = pd.read_csv('data/MMM_MMM_GeolocCompteurs.csv')
-
-# Conversion des Colonnes de Latitude et Longitude au Format Numérique
-data2['Latitude'] = pd.to_numeric(data2['Latitude'], errors='coerce')
-data2['Longitude'] = pd.to_numeric(data2['Longitude'], errors='coerce')
-
-# Création de la figure Plotly
-fig = go.Figure()
-
-# Ajout des points sur le graphique avec des infobulles
-fig.add_trace(go.Scatter(
-    x=data2['Longitude'],
-    y=data2['Latitude'],
-    text=data2.apply(lambda row: f"{row['Nom du com']} ({row['N° Série']} vélos)", axis=1),
-    mode='markers',
-    marker=dict(
-        size=8,
-        color=np.linspace(0, 1, len(data2)),  # Utilisation de linspace pour générer des couleurs différentes
-        colorscale='Rainbow',
-        showscale=True
-    )
-))
-
-# Mise en page du graphique
-fig.update_layout(
-    title='Localisation des Compteurs de Vélo à Montpellier',
-    xaxis_title='Longitude',
-    yaxis_title='Latitude',
-    annotations=[
-        dict(
-            x=0.5,
-            y=-0.1,
-            xref='paper',
-            yref='paper',
-            text="Les points représentent les compteurs de vélo et leurs positions exactes tout au long de Montpellier.",
-            showarrow=False,
-            font=dict(size=12)
-        )
-    ]
-)
-
-# Sauvegarder la figure dans un fichier HTML
-html_file = "OCP.html"
-fig.write_html(html_file)
-
-#'2023-01-01'
-
-```
 
 ## Visualisation des Compteurs de Vélo
 
