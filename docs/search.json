@@ -18,7 +18,7 @@
     "href": "donnees.html#disponibilité-des-stations-vélomagg-en-temps-réel",
     "title": "Données",
     "section": "3. Disponibilité des stations VéloMagg en temps réel",
-    "text": "3. Disponibilité des stations VéloMagg en temps réel\nLien : Disponibilité des places VéloMagg en temps réel\nCette API fournit des informations actualisées sur :\n- Le nombre de vélos disponibles dans chaque station.\n- Le nombre de places libres pour y déposer un vélo.\nElle nous permet de :\n- Afficher en temps réel les stations à proximité avec des vélos ou des places libres.\n- Simplifier la planification de vos trajets.\n\nGrâce à ces données, notre objectif est de rendre vos trajets à vélo plus fluides, pratiques et agréables dans la Métropole de Montpellier.\n\n\n© 2024 MONTPELLI’CYCLE. This project is licensed under the MIT License."
+    "text": "3. Disponibilité des stations VéloMagg en temps réel\nLien : Disponibilité des places VéloMagg en temps réel\nCette API fournit des informations actualisées sur :\n- Le nombre de vélos disponibles dans chaque station.\n- Le nombre de places libres pour y déposer un vélo.\nElle nous permet de :\n- Afficher en temps réel les stations à proximité avec des vélos ou des places libres.\n- Simplifier la planification de vos trajets."
   },
   {
     "objectID": "license.html",
@@ -35,18 +35,18 @@
     "text": "Vous cherchez un vélo disponible près de chez vous ou à proximité de votre destination ? Grâce à notre carte interactive, vous pouvez visualiser en temps réel la disponibilité des vélos dans toute la ville de Montpellier.\n📊 Mise à jour toutes les 15 minutes, cette carte est un outil pratique pour :\n- Trouver rapidement une station de vélos avec des vélos disponibles ou des places libres.\n- Planifier vos trajets en fonction des ressources de votre quartier.\n- Suivre l’évolution des disponibilités.\nCliquez sur la carte ci-dessous pour commencer à trouver la station vélo qui vous convient ! 🚴‍♀️\n\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook\n\n\n\n\n© 2024 MONTPELLI’CYCLE. This project is licensed under the MIT License."
   },
   {
-    "objectID": "dispo.html#visualisation-des-compteurs-de-vélo",
-    "href": "dispo.html#visualisation-des-compteurs-de-vélo",
-    "title": "Disponibilité des vélos",
-    "section": "Visualisation des Compteurs de Vélo",
-    "text": "Visualisation des Compteurs de Vélo\n\n\n\n\n© 2024 MONTPELLI’CYCLE. This project is licensed under the MIT License."
-  },
-  {
     "objectID": "etude.html",
     "href": "etude.html",
     "title": "Étude",
     "section": "",
-    "text": "Quels sont les quartiers de Montpellier les plus adeptes du vélo ?\nAvec une prise de conscience écologique croissante, de plus en plus d’habitants se tournent vers des modes de transport respectueux de l’environnement. Mais quels quartiers de Montpellier montrent l’exemple en adoptant le vélo au quotidien ?\nNous avons mené une étude pour analyser cette évolution. Découvrez :\n- 🗓️ Les tendances d’utilisation des vélos en 2023\n- 🚲 Les changements observés en 2024\nLequel de ces quartiers sera en tête du mouvement écologique ?\nEt si c’était le vôtre ?\nInspirons-nous mutuellement pour faire de Montpellier une ville toujours plus verte ! 🌿\n\n\n\n© 2024 MONTPELLI’CYCLE. This project is licensed under the MIT License."
+    "text": "import numpy as np\nimport pandas as pd\nimport plotly.graph_objects as go\n\n# Chargement du Fichier CSV\ndata2 = pd.read_csv('data/MMM_MMM_GeolocCompteurs.csv')\n\n# Conversion des Colonnes de Latitude et Longitude au Format Numérique\ndata2['Latitude'] = pd.to_numeric(data2['Latitude'], errors='coerce')\ndata2['Longitude'] = pd.to_numeric(data2['Longitude'], errors='coerce')\n\n# Création de la figure Plotly\nfig = go.Figure()\n\n# Ajout des points sur le graphique avec des infobulles\nfig.add_trace(go.Scatter(\n    x=data2['Longitude'],\n    y=data2['Latitude'],\n    text=data2.apply(lambda row: f\"{row['Nom du com']} ({row['N° Série']} vélos)\", axis=1),\n    mode='markers',\n    marker=dict(\n        size=8,\n        color=np.linspace(0, 1, len(data2)),  # Utilisation de linspace pour générer des couleurs différentes\n        colorscale='Rainbow',\n        showscale=True\n    )\n))\n\n# Mise en page du graphique\nfig.update_layout(\n    title='Localisation des Compteurs de Vélo à Montpellier',\n    xaxis_title='Longitude',\n    yaxis_title='Latitude',\n    annotations=[\n        dict(\n            x=0.5,\n            y=-0.1,\n            xref='paper',\n            yref='paper',\n            text=\"Les points représentent les compteurs de vélo et leurs positions exactes tout au long de Montpellier.\",\n            showarrow=False,\n            font=dict(size=12)\n        )\n    ]\n)\n\n# Sauvegarder la figure dans un fichier HTML\nhtml_file = \"OCP.html\"\nfig.write_html(html_file)\n\n#'2023-01-01'"
+  },
+  {
+    "objectID": "etude.html#visualisation-des-compteurs-de-vélo",
+    "href": "etude.html#visualisation-des-compteurs-de-vélo",
+    "title": "Étude",
+    "section": "Visualisation des Compteurs de Vélo",
+    "text": "Visualisation des Compteurs de Vélo\n\n\n\n\n© 2024 MONTPELLI’CYCLE. This project is licensed under the MIT License."
   },
   {
     "objectID": "density.html#densité-du-traffic-sur-la-journée-du-mois-dernier.",
