@@ -1,5 +1,5 @@
 ---
-title: "Densité du trafic"
+title: "Prévisions"
 format: html
 execute:
   echo: false
@@ -8,33 +8,6 @@ css: styles/custom.css
 
 ---
 ![ ](images/logo.png){style="position: absolute; top: 20px; left: 20px; width: 150px; height: auto;"}
-
-## Densité du traffic sur la journée du mois dernier.
-
-```{python}
-from bike_data import get_bike_data, get_bike_routes
-from density import create_density_map 
-from IPython.display import HTML
-import datetime
-from dateutil.relativedelta import relativedelta
-import locale
-locale.setlocale(locale.LC_TIME,'')
-
-# simulation_date = datetime.datetime.strptime('2024-11-14', "%Y-%m-%d")
-simulation_date = datetime.date.today() + relativedelta(months=-1)
-print(f'Journée du {simulation_date.strftime("%d/%m/%Y")}')
-
-# Retrieve stations and routes
-stations, trajets = get_bike_data(simulation_date)
-
-# Get bike routes based on stations and trips
-bikes_routes = get_bike_routes(stations, trajets)
-
-# Create and display density map
-density_map = create_density_map(bikes_routes)
-HTML(density_map._repr_html_())
-
-```
 
 ## Prévision de la densité de circulation pour demain.
 
