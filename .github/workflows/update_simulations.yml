@@ -30,9 +30,9 @@ jobs:
       - run: python -m pip install --upgrade pip
       - run: pip install -r requirements.txt
 
-      - name: Render density.html
+      - name: Render previsions.html
         working-directory: docs
-        run: quarto render density.qmd
+        run: quarto render previsions.qmd
 
       - name: Render trafic.html
         working-directory: docs
